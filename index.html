@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarker</title>
+
+
+
+    <!-- * ~~~ meta ~~~ * -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- * ~~~  Google Fonts ~~~ * -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+
+
+    <!-- * ~~~ Icon fav ~~~ * -->
+    <link rel="shortcut icon" href="images/bookmarker logo.png" type="image/x-icon">
+
+    <!-- * ~~~ Font Awsome ~~~ * -->
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <!-- * ~~~ Bootstrab ~~~ * -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- * ~~~ Main style ~~~ * -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- * ~~~ Media query ~~~ * -->
+    <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+
+    <main class="bg-offwhite min-vh-100">
+        <div class=" Link-page container py-5 d-flex flex-column align-items-center">
+
+            <h1 class="text-center py-2 position-relative z-1">Bookmarker</h1>
+
+            <div
+                class="inputsForm border-style w-100 mt-5 py-4 px-3 d-flex flex-column justify-content-center align-content-center gap-4">
+                <div class="align-self-center">
+                    <h2>
+                        <i class="fa-solid fa-bookmark"></i>
+                        Bookmark your favorite sites
+                        <i class="fa-solid fa-bookmark"></i>
+                    </h2>
+                </div>
+
+                <div>
+                    <label for="SiteNameID" class="pb-2 fw-bolder"><i class="fa-solid fa-book-bookmark pe-2"></i>Site
+                        Name</label>
+                    <input oninput="DisplayNameValidEffect()" id="SiteNameID" type="text" class="form-control " placeholder="Bookmark Name">
+                </div>
+
+                <div>
+                    <label for="SiteUrlID" class="pb-2 fw-bolder"><i class="fa-solid fa-link pe-2"></i>Site URL</label>
+                    <input oninput="DisplayURLValidEffect()" id="SiteUrlID" type="text" class="form-control " placeholder="Website URL">
+                </div>
+
+                <button id="submitBtnID" onclick="addLink()" class="btn btn-submit px-5 align-self-center "
+                    data-bs-target="#exampleModal">Submit</button>
+            </div>
+
+            <table class="linksTable w-100 table table-hover align-middle tableBorderedStyle mt-4 text-center bg-light">
+                <thead class="table-secondary align-middle">
+                    <tr>
+                        <th scope="col">Index</th>
+                        <th scope="col">Website Name</th>
+                        <th scope="col">Visit</th>
+                        <th scope="col">Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+            </table>
+
+
+            <div id="WarningMsgID"
+                class="WarningMsg d-none bg-dark-transperant position-fixed start-0 end-0 top-0 bottom-0 z-3 ">
+                <div onclick="closeWArningMsg()"
+                    class="WarningOverlay w-100 h-100 d-flex justify-content-center align-items-center">
+                </div>
+                <div class="WarningBox bg-white rounded-2 position-absolute top-50 start-50 ">
+                    <div class=" d-flex flex-column p-4">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <div>
+                                <i class="fa-solid fa-circle fs-20 text-red"></i>
+                                <i class="fa-solid fa-circle fs-20 text-yellow"></i>
+                                <i class="fa-solid fa-circle fs-20 text-green"></i>
+                            </div>
+                            <button onclick="closeWArningMsg()" id="btnCloseID"
+                                class="btn btn_Close border-0 px-12 py-6 d-flex justify-content-center align-items-center">
+                                <i class="fa-solid fa-xmark close fs-3"></i>
+                            </button>
+                        </div>
+                        <div class="">
+                            <h3>Site Name or Url is not valid, Please follow the rules below :</h3>
+                            <h4 class="pt-10 mb-0">
+                                <i class="fa-regular fa-circle-up fa-rotate-90 p-2"></i>
+                                Site name must contain at least 3 characters
+                            </h4>
+                            <h4 class="pt-10 mb-0">
+                                <i class="fa-regular fa-circle-up fa-rotate-90 p-2"></i>
+                                Site URL must be a valid one
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- * ~~~ Bootstrab js ~~~ * -->
+            <script src="js/bootstrap.bundle.min.js"></script>
+            <script src="js/scribt.js"></script>
+</body>
+
+</html>
