@@ -70,14 +70,6 @@ function closeWArningMsg() {
 }
 
 
-
-
-
-
-
-
-
-
 function DisplayURLValidEffect() {
   if (siteURLInput.value) {
     if (checkURLValidation()) {
@@ -96,7 +88,6 @@ function checkURLValidation() {
     /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()!@:%_\+.~#?&\/\/=]*)/;
   return Regex_URL.test(siteURLInput.value);
 }
-
 
 
 function DisplayNameValidEffect() {
